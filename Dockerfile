@@ -12,7 +12,7 @@ LABEL io.k8s.description="Platform for serving static HTML files" \
      io.openshift.tags="builder,html,lighttpd,1.4.35"
 
 RUN cd /tmp/ && wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm && \
-	yum install -y epel-release-7-8.noarch.rpm && rm -f epel-* && cd -\
+	yum install -y epel-release-7-8.noarch.rpm && rm -f epel-* && cd - && \
 	yum install -y lighttpd && \
 	yum clean all -y
 
